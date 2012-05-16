@@ -1,9 +1,17 @@
-use MooseX::Declare;
-use 5.010;
-
 ## no critic (RequireUseStrict)
-class Tapper::TestSuite::HWTrack::Prepare extends Tapper::Base {
+package Tapper::TestSuite::HWTrack::Prepare;
+BEGIN {
+  $Tapper::TestSuite::HWTrack::Prepare::AUTHORITY = 'cpan:AMD';
+}
+{
+  $Tapper::TestSuite::HWTrack::Prepare::VERSION = '4.0.1';
+}
+# ABSTRACT: Support package for Tapper::TestSuite::HWTrack
 
+        use 5.010;
+
+        use Moose;
+        extends 'Tapper::Base';
         use File::ShareDir 'module_dir';
         use File::Temp     'tempdir';
 
@@ -13,12 +21,9 @@ class Tapper::TestSuite::HWTrack::Prepare extends Tapper::Base {
         has starttime => ( is => 'rw', );
 
 
-        # Prepare lshw executable
-        #
-        # @return success - 0
-        # @return error   - error string
-        method install
-        {
+        sub install {
+                my ($self) = @_;
+
                 my $src = $self->src;
                 my $dst = $self->dst;
                 my ($error, $msg);
@@ -30,37 +35,36 @@ class Tapper::TestSuite::HWTrack::Prepare extends Tapper::Base {
                 return 0;
         }
 
-}
+1;
+
+__END__
+=pod
+
+=encoding utf-8
 
 =head1 NAME
 
 Tapper::TestSuite::HWTrack::Prepare - Support package for Tapper::TestSuite::HWTrack
 
-=head1 SYNOPSIS
+=head2 install
 
-Don't use this module directly!
+Prepare lshw executable
+
+@return success - 0
+
+@return error   - error string
 
 =head1 AUTHOR
 
-AMD OSRC Tapper Team, C<< <tapper at amd64.org> >>
+AMD OSRC Tapper Team <tapper@amd64.org>
 
-=head1 SUPPORT
+=head1 COPYRIGHT AND LICENSE
 
-You can find documentation for this module with the perldoc command.
+This software is Copyright (c) 2012 by Advanced Micro Devices, Inc..
 
-    perldoc Tapper::TestSuite::HWTrack
+This is free software, licensed under:
 
-
-=head1 ACKNOWLEDGEMENTS
-
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2008-2011 AMD OSRC Tapper team, all rights reserved.
-
-This program is released under the following license: freebsd
-
+  The (two-clause) FreeBSD License
 
 =cut
 
-1;
