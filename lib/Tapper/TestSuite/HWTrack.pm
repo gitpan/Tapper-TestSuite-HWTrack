@@ -1,10 +1,12 @@
 ## no critic (RequireUseStrict)
 package Tapper::TestSuite::HWTrack;
+# git description: v4.0.1-2-g3cc4433
+
 BEGIN {
   $Tapper::TestSuite::HWTrack::AUTHORITY = 'cpan:AMD';
 }
 {
-  $Tapper::TestSuite::HWTrack::VERSION = '4.0.1';
+  $Tapper::TestSuite::HWTrack::VERSION = '4.1.0';
 }
 # ABSTRACT: Tapper - Report hardware meta information
 

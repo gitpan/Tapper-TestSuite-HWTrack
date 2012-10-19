@@ -4,7 +4,7 @@ BEGIN {
   $Tapper::TestSuite::HWTrack::Execute::AUTHORITY = 'cpan:AMD';
 }
 {
-  $Tapper::TestSuite::HWTrack::Execute::VERSION = '4.0.1';
+  $Tapper::TestSuite::HWTrack::Execute::VERSION = '4.1.0';
 }
 # ABSTRACT: Support package for Tapper::TestSuite::HWTrack
 

@@ -18,7 +18,9 @@ my %WriteMakefileArgs = (
     "ExtUtils::MakeMaker" => "6.30"
   },
   "DISTNAME" => "Tapper-TestSuite-HWTrack",
-  "EXE_FILES" => [],
+  "EXE_FILES" => [
+    "bin/tapper-testsuite-hwtrack"
+  ],
   "LICENSE" => "open_source",
   "NAME" => "Tapper::TestSuite::HWTrack",
   "PREREQ_PM" => {
@@ -26,6 +28,7 @@ my %WriteMakefileArgs = (
     "File::Temp" => 0,
     "IO::Select" => 0,
     "IO::Socket::INET" => 0,
+    "Log::Log4perl" => 0,
     "Moose" => 0,
     "Sys::Hostname" => 0,
     "Tapper::Base" => 0,
@@ -33,7 +36,7 @@ my %WriteMakefileArgs = (
     "YAML" => 0,
     "aliased" => 0
   },
-  "VERSION" => "4.0.1",
+  "VERSION" => "4.1.0",
   "test" => {
     "TESTS" => "t/*.t"
   }
