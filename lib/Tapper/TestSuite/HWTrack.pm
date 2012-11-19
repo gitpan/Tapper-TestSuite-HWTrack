@@ -1,12 +1,12 @@
 ## no critic (RequireUseStrict)
 package Tapper::TestSuite::HWTrack;
-# git description: v4.0.1-2-g3cc4433
+# git description: v4.1.0-2-gab79953
 
 BEGIN {
-  $Tapper::TestSuite::HWTrack::AUTHORITY = 'cpan:AMD';
+  $Tapper::TestSuite::HWTrack::AUTHORITY = 'cpan:TAPPER';
 }
 {
-  $Tapper::TestSuite::HWTrack::VERSION = '4.1.0';
+  $Tapper::TestSuite::HWTrack::VERSION = '4.1.1';
 }
 # ABSTRACT: Tapper - Report hardware meta information
 
@@ -29,7 +29,7 @@ __END__
 
 Tapper::TestSuite::HWTrack - Tapper - Report hardware meta information
 
-=head1 ABOUT
+=head1 DESCRIPTION
 
 HWTrack calls the tool lshw, parses its input and sends it to the
 report framework.

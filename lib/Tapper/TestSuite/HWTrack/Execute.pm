@@ -1,10 +1,10 @@
 ## no critic (RequireUseStrict)
 package Tapper::TestSuite::HWTrack::Execute;
 BEGIN {
-  $Tapper::TestSuite::HWTrack::Execute::AUTHORITY = 'cpan:AMD';
+  $Tapper::TestSuite::HWTrack::Execute::AUTHORITY = 'cpan:TAPPER';
 }
 {
-  $Tapper::TestSuite::HWTrack::Execute::VERSION = '4.1.0';
+  $Tapper::TestSuite::HWTrack::Execute::VERSION = '4.1.1';
 }
 # ABSTRACT: Support package for Tapper::TestSuite::HWTrack
 
